@@ -216,7 +216,7 @@ config in an image's documentation is a skill you will reuse constantly.
 
 *Mode: scaffold generated, test hand-written.*
 
-- [ ] **Task.** Create a `ticketing_test` database. Scaffold `apps/api`:
+- [x] **Task.** Create a `ticketing_test` database. Scaffold `apps/api`:
   ```bash
   mkdir -p apps/api && cd apps/api
   pnpm init
