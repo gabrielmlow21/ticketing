@@ -20,3 +20,6 @@ Before recording a step as done, run that step's own Verify commands from
 `docs/ROADMAP.md` and confirm they pass. Record what was actually observed. For
 anything Gabriel verified by hand, attribute it to him rather than writing it as
 checked.
+
+When a step is recorded as done, remind Gabriel to commit, and offer a commit
+message. Do not run the commit unless he asks.
