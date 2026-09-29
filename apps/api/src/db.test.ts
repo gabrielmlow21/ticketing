@@ -1,8 +1,6 @@
 import postgres from "postgres";
 import { afterAll, expect, test } from "vitest";
 
-const x: number = "oops";
-
 const sql = postgres(
   process.env.DATABASE_URL ??
     "postgres://user:password@localhost:5432/ticketing_test",
