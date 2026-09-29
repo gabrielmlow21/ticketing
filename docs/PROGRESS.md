@@ -4,7 +4,7 @@ Read `docs/ROADMAP.md` for what each step requires. This file records only where
 things currently stand and the local facts that are not derivable from the
 roadmap. Update it whenever a step changes state.
 
-## Current step: 0.5 — CI
+## Current step: 1.1 — Branded primitives (Phase 0 complete)
 
 ### Done
 
@@ -24,11 +24,16 @@ roadmap. Update it whenever a step changes state.
   `afterAll`. Both commands verified green, and the test verified failing with
   the container stopped.
 
-### Remaining in 0.5
+- 0.5 CI — `.github/workflows/ci.yml` with parallel `typecheck` and `test`
+  jobs (no `needs:`, `concurrency` with `cancel-in-progress`, pnpm cache,
+  `--frozen-lockfile`, Postgres service container), pushed in f6d8a1a. The
+  GitHub Actions results — both jobs green, then a deliberate type error in
+  8e89e74 failing `typecheck` while `test` still ran, then reverted in
+  6ef1fd4 — were verified by Gabriel by hand; I could not query Actions from
+  here. Locally re-run and green: `pnpm -r typecheck` and `pnpm -r test`
+  (1 test passed).
 
-- [ ] `.github/workflows/ci.yml` with parallel `typecheck` and `test` jobs.
-- [ ] Verify: push, both jobs green; then break a type on purpose and confirm
-      `typecheck` fails while `test` still runs.
+Phase 0 is done.
 
 ## Local facts
 

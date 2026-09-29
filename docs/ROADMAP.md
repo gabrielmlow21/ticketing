@@ -239,7 +239,7 @@ config in an image's documentation is a skill you will reuse constantly.
 
 ### 0.5 — CI
 
-- [ ] **Task.** `.github/workflows/ci.yml` with two jobs: `typecheck` (no
+- [x] **Task.** `.github/workflows/ci.yml` with two jobs: `typecheck` (no
   database) and `test` (Postgres service container).
 - **Invariant.** The two jobs run in parallel, not in sequence. A type error and
   a failing test are independent facts — you want both reported in one run, not
